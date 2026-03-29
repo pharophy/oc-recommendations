@@ -108,3 +108,21 @@ body[saved-theme="dark"] {
   color: var(--section-accent);
   font-weight: 700;
 }
+
+.restaurant-photo-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  margin: 1rem 0 1.5rem;
+}
+
+.restaurant-photo-grid img {
+  width: 100%;
+  height: 100%;
+  min-height: 12rem;
+  max-height: 18rem;
+  object-fit: cover;
+  border-radius: 0.9rem;
+  border: 1px solid var(--lightgray);
+  background: var(--section-surface);
+}

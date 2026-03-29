@@ -77,6 +77,27 @@ async function collectMarkdownFiles(dir) {
   return results
 }
 
+async function collectImageFiles(dir) {
+  if (!(await exists(dir))) return []
+
+  const entries = await fs.readdir(dir, { withFileTypes: true })
+  const results = []
+
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name)
+    if (entry.isDirectory()) {
+      results.push(...(await collectImageFiles(fullPath)))
+      continue
+    }
+
+    if (entry.isFile() && /\.(avif|gif|jpe?g|png|webp)$/i.test(entry.name)) {
+      results.push(fullPath)
+    }
+  }
+
+  return results.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+}
+
 async function copySectionDirectory(sourceDir, destDir, { skipRootIndex = false } = {}) {
   await ensureDir(destDir)
   const entries = await fs.readdir(sourceDir, { withFileTypes: true })
@@ -150,6 +171,7 @@ function buildGenericSectionIndex(section) {
 }
 
 function buildRestaurantIndex(section, restaurants) {
+  const areas = [...new Set(restaurants.map((item) => item.area).filter(Boolean))].sort()
   const types = [...new Set(restaurants.map((item) => item.venueType).filter(Boolean))].sort()
   const prices = [...new Set(restaurants.map((item) => item.price).filter(Boolean))].sort(
     (a, b) => a.length - b.length || a.localeCompare(b),
@@ -220,6 +242,7 @@ function buildRestaurantIndex(section, restaurants) {
     "      <span>Search</span>",
     '      <input type="search" placeholder="Search venues, areas, or standout details" data-filter="search" />',
     "    </label>",
+    buildSelect("area", "Area", areas),
     buildSelect("type", "Type", types),
     buildSelect("price", "Price", prices),
     buildSelect("kids", "Kids Allowed", kidsPolicies),
@@ -251,6 +274,19 @@ function buildRestaurantIndex(section, restaurants) {
     "- `Kids Allowed` reflects the most reliable current signal available in the source notes; venues with bar-style or time-based rules are marked `Mixed / Time-dependent`.",
     "",
   ].join("\n")
+}
+
+function buildRestaurantPhotoGallery(title, imageLinks) {
+  if (imageLinks.length === 0) return ""
+
+  const galleryItems = imageLinks
+    .map(
+      (imageLink, index) =>
+        `  <img src="${escapeHtml(imageLink)}" alt="${escapeHtml(`${title} photo ${index + 1}`)}" loading="lazy" />`,
+    )
+    .join("\n")
+
+  return ["## Photos", "", '<div class="restaurant-photo-grid">', galleryItems, "</div>", ""].join("\n")
 }
 
 function getVenueFrontmatter(data) {
@@ -301,7 +337,21 @@ async function stageSection(section) {
     const relativeFromSource = path.relative(sourceDir, filePath)
     const targetOutputPath = path.join(outputDir, relativeFromSource)
     const indexDir = path.dirname(path.join(outputDir, "index.md"))
-    const cleanedContent = matter.stringify(parsed.content.trimStart(), getVenueFrontmatter(parsed.data))
+    const sourceImagesDir = path.join(path.dirname(filePath), "images", path.basename(filePath, ".md"))
+    const outputImagesDir = path.join(path.dirname(targetOutputPath), "images", path.basename(filePath, ".md"))
+    const imageFiles = await collectImageFiles(sourceImagesDir)
+    const imageLinks = imageFiles.map((imagePath) =>
+      getRelativeLink(path.dirname(targetOutputPath), path.join(outputImagesDir, path.relative(sourceImagesDir, imagePath))),
+    )
+    const hasEmbeddedImages = /!\[[^\]]*\]\([^)]+\)/.test(parsed.content)
+    const gallery = hasEmbeddedImages
+      ? ""
+      : buildRestaurantPhotoGallery(
+          normalizeWhitespace(parsed.data.title ?? path.basename(filePath, ".md")),
+          imageLinks,
+        )
+    const contentWithGallery = [gallery, parsed.content.trimStart()].filter(Boolean).join("\n")
+    const cleanedContent = matter.stringify(contentWithGallery, getVenueFrontmatter(parsed.data))
 
     await ensureDir(path.dirname(targetOutputPath))
     await fs.writeFile(targetOutputPath, `${cleanedContent.trimEnd()}\n`, "utf8")

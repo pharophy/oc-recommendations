@@ -3,6 +3,7 @@ function initRestaurantIndex() {
   if (!root) return
 
   const searchInput = root.querySelector('[data-filter="search"]')
+  const areaFilter = root.querySelector('[data-filter="area"]')
   const typeFilter = root.querySelector('[data-filter="type"]')
   const priceFilter = root.querySelector('[data-filter="price"]')
   const kidsFilter = root.querySelector('[data-filter="kids"]')
@@ -27,16 +28,18 @@ function initRestaurantIndex() {
 
   const update = () => {
     const searchValue = (searchInput?.value || "").trim().toLowerCase()
+    const areaValue = areaFilter?.value || ""
     const typeValue = typeFilter?.value || ""
     const priceValue = priceFilter?.value || ""
     const kidsValue = kidsFilter?.value || ""
 
     const visibleRows = rows.filter((row) => {
       const matchesSearch = !searchValue || (row.dataset.search || "").includes(searchValue)
+      const matchesArea = !areaValue || row.dataset.area === areaValue
       const matchesType = !typeValue || row.dataset.type === typeValue
       const matchesPrice = !priceValue || row.dataset.price === priceValue
       const matchesKids = !kidsValue || row.dataset.kids === kidsValue
-      const matches = matchesSearch && matchesType && matchesPrice && matchesKids
+      const matches = matchesSearch && matchesArea && matchesType && matchesPrice && matchesKids
       row.hidden = !matches
       return matches
     })
@@ -64,7 +67,7 @@ function initRestaurantIndex() {
     root.dataset.sortDirection = sortDirection
   }
 
-  ;[searchInput, typeFilter, priceFilter, kidsFilter]
+  ;[searchInput, areaFilter, typeFilter, priceFilter, kidsFilter]
     .filter(Boolean)
     .forEach((element) => element.addEventListener("input", update))
 
