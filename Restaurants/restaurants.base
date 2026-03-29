@@ -1,0 +1,39 @@
+filters:
+  and:
+    - file.inFolder("Restaurants")
+    - file.ext == "md"
+    - file.hasTag("restaurant")
+formulas:
+  venue: file.asLink(title)
+properties:
+  formula.venue:
+    displayName: Name
+  area:
+    displayName: Area
+  venueType:
+    displayName: Type
+  price:
+    displayName: Price
+  kidsAllowed:
+    displayName: Kids Allowed
+  standout:
+    displayName: Why It Stands Out
+  website:
+    displayName: Website
+  openTable:
+    displayName: OpenTable
+views:
+  - type: table
+    name: All Restaurants
+    order:
+      - formula.venue
+      - area
+      - venueType
+      - price
+      - kidsAllowed
+      - standout
+    sort:
+      - property: area
+        direction: DESC
+      - property: venue
+        direction: ASC

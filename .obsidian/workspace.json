@@ -1,0 +1,232 @@
+{
+  "main": {
+    "id": "7b55686b9efcb42a",
+    "type": "split",
+    "children": [
+      {
+        "id": "6eec508d32b5f020",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a1521b43c092ad01",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "23637c6f687d4fe6",
+    "type": "split",
+    "children": [
+      {
+        "id": "8d4fe8c71f5af624",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6412af3507ad5d3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "f9197456fc6391ba",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f4269e714223fe22",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cb42278be38547e9",
+    "type": "split",
+    "children": [
+      {
+        "id": "31d3af79b6e944e8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2ef64077ff7985e8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Restaurants/index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for index"
+            }
+          },
+          {
+            "id": "32feac63e6847fc7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Restaurants/index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from index"
+            }
+          },
+          {
+            "id": "dc76811a5e603c29",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1ba35e83c7c6c62c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "d14efc01cf6746d8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Restaurants/index.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of index"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "publish:Publish changes...": false
+    }
+  },
+  "active": "b6412af3507ad5d3",
+  "lastOpenFiles": [
+    "quartz-site/public/restaurants/raised-by-wolves.html",
+    "quartz-site/public/restaurants/vienza-cave-speakeasy-at-europa-village-og-image.webp",
+    "quartz-site/public/restaurants/trader-sams-enchanted-tiki-bar-og-image.webp",
+    "quartz-site/public/restaurants/the-obscure-og-image.webp",
+    "quartz-site/public/restaurants/the-lost-inferno-og-image.webp",
+    "quartz-site/public/restaurants/the-gallery-elementa-og-image.webp",
+    "quartz-site/public/restaurants/the-cave-restaurant-at-oak-mountain-winery-og-image.webp",
+    "quartz-site/public/restaurants/the-cauldron-spirits-and-brews-og-image.webp",
+    "quartz-site/public/restaurants/the-blind-rabbit-og-image.webp",
+    "quartz-site/public/restaurants/strong-water-anaheim-og-image.webp",
+    "quartz-site/public/restaurants/stowaway-og-image.webp",
+    "quartz-site/public/restaurants/vienza-cave-speakeasy-at-europa-village.html",
+    "quartz-site/public/restaurants/trader-sams-enchanted-tiki-bar.html",
+    "quartz-site/public/restaurants/the-obscure.html",
+    "quartz-site/public/restaurants/the-lost-inferno.html",
+    "quartz-site/public/restaurants/the-gallery-elementa.html",
+    "quartz-site/public/restaurants/the-cave-restaurant-at-oak-mountain-winery.html",
+    "quartz-site/public/restaurants/the-cauldron-spirits-and-brews.html",
+    "quartz-site/public/restaurants/the-blind-rabbit.html",
+    "quartz-site/public/restaurants/strong-water-anaheim.html",
+    "quartz-site/public/restaurants/stowaway.html",
+    "quartz-site/content/index.md",
+    "quartz-site/content/restaurants/vienza-cave-speakeasy-at-europa-village.md",
+    "quartz-site/content/restaurants/trader-sams-enchanted-tiki-bar.md",
+    "quartz-site/content/restaurants/the-obscure.md",
+    "quartz-site/content/restaurants/the-lost-inferno.md",
+    "quartz-site/content/restaurants/the-gallery-elementa.md",
+    "quartz-site/content/restaurants/the-cave-restaurant-at-oak-mountain-winery.md",
+    "quartz-site/content/restaurants/the-cauldron-spirits-and-brews.md",
+    "quartz-site/content/restaurants/the-blind-rabbit.md",
+    "quartz-site/content/restaurants/strong-water-anaheim.md",
+    "quartz-site/content/restaurants/stowaway.md",
+    "quartz-site/content/restaurants/scum-and-villainy-cantina.md",
+    "quartz-site/content/restaurants/royal-hawaiian.md",
+    "quartz-site/content/restaurants/realm-of-the-52-remedies.md",
+    "quartz-site/content/restaurants/raised-by-wolves.md",
+    "quartz-site/content/restaurants/pirates-dinner-adventure.md",
+    "quartz-site/content/restaurants/mothership.md",
+    "quartz-site/content/restaurants/momoku-no-usagi.md",
+    "quartz-site/content/restaurants/medieval-times-buena-park.md",
+    "quartz-site/content/restaurants/insideout.md",
+    "quartz-site/content/restaurants/index.md",
+    "quartz-site/content/restaurants/immersive-restaurants-socal-2026-03-23.md",
+    "quartz-site/content/restaurants/elixir-wizard-academy-and-boba-tea-bar.md",
+    "quartz-site/content/restaurants/black-rabbit-rose.md",
+    "quartz-site/content/restaurants/belly-of-the-beast.md"
+  ]
+}

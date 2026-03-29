@@ -1,0 +1,15 @@
+{
+  "name": "codex",
+  "version": "1.0.0",
+  "description": "Publishing workspace for an Obsidian-authored SoCal experiences guide.",
+  "private": true,
+  "scripts": {
+    "stage:site": "node quartz-site/scripts/stage-content.mjs",
+    "site:build": "npm run stage:site && npm --prefix quartz-site run quartz -- build",
+    "site:dev": "npm run stage:site && npm --prefix quartz-site run quartz -- build --serve",
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
