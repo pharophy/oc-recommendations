@@ -19,6 +19,12 @@ standout: >-
   Angeles. The experience is structured like a narrative tasting rather than an
   ordinary seated bar visit.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/the-obscure/01.webp" alt="The Obscure photo 1" loading="lazy" />
+</div>
+
 # The Obscure
 
 ## Photos

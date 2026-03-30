@@ -21,6 +21,12 @@ standout: >-
   that feels performative rather than merely upscale, Barton G still sets the
   benchmark.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/barton-g-the-restaurant/01.webp" alt="Barton G. The Restaurant photo 1" loading="lazy" />
+</div>
+
 # Barton G. The Restaurant
 
 ## Photos

@@ -22,6 +22,12 @@ standout: >-
   cocktail program give it a proper hidden-room energy instead of a standard
   sushi-bar setup.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/momoku-no-usagi/01.png" alt="Momoku No Usagi photo 1" loading="lazy" />
+</div>
+
 # Momoku No Usagi
 
 ## Photos

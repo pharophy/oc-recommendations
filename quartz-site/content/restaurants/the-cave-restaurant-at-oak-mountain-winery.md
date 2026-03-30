@@ -21,6 +21,12 @@ standout: >-
   subterranean environment. Stone walls, cave lighting, and winery context make
   it destination-worthy even before you factor in food or wine.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/the-cave-restaurant-at-oak-mountain-winery/01.jpg" alt="The Cave Restaurant at Oak Mountain Winery photo 1" loading="lazy" />
+</div>
+
 # The Cave Restaurant at Oak Mountain Winery
 
 ## Photos

@@ -21,6 +21,12 @@ standout: >-
   cave-like architecture, alien foliage, starry ceilings, programmed lighting,
   and a sci-fi narrative mood from the moment you enter.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/mothership/01.jpg" alt="Mothership photo 1" loading="lazy" />
+</div>
+
 # Mothership
 
 ## Photos

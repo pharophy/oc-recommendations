@@ -18,6 +18,12 @@ standout: >-
   list: ornate old-world styling, high-concept cocktail design, and a room that
   feels wildly out of place in the middle of a mall.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/raised-by-wolves/01.jpg" alt="Raised by Wolves photo 1" loading="lazy" />
+</div>
+
 # Raised by Wolves
 
 ## Photos

@@ -20,6 +20,12 @@ standout: >-
   support it, and the room feels designed for a themed night out instead of a
   standard sports-bar layout with decorations.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/the-cauldron-spirits-and-brews/01.png" alt="The Cauldron Spirits &amp; Brews photo 1" loading="lazy" />
+</div>
+
 # The Cauldron Spirits & Brews
 
 ## Photos

@@ -20,6 +20,12 @@ standout: >-
   performance, spooky visuals, and audience-facing spectacle rather than just
   menu theming.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/beetlehouse-la/01.png" alt="BeetleHouse LA photo 1" loading="lazy" />
+</div>
+
 # BeetleHouse LA
 
 ## Photos

@@ -21,6 +21,12 @@ standout: >-
   course by course. It reads more like a theme-park-caliber hospitality
   production than a standard restaurant activation.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/the-gallery-elementa/01.jpg" alt="The Gallery / Elementa photo 1" loading="lazy" />
+</div>
+
 # The Gallery / Elementa
 
 ## Photos

@@ -20,6 +20,12 @@ standout: >-
   experiences go this hard on physical set-building, stunt performance, and "you
   are in the show now" energy.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/pirates-dinner-adventure/01.jpg" alt="Pirates Dinner Adventure photo 1" loading="lazy" />
+</div>
+
 # Pirates Dinner Adventure
 
 ## Photos

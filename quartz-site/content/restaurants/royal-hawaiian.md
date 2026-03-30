@@ -20,6 +20,12 @@ standout: >-
   proper Orange County destination because it is both a historic room and a
   lively beach-town escape, not just another modern tiki imitation.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/royal-hawaiian/01.jpg" alt="Royal Hawaiian photo 1" loading="lazy" />
+</div>
+
 # Royal Hawaiian
 
 ## Photos

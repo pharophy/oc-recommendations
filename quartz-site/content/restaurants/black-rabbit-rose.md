@@ -20,6 +20,12 @@ standout: >-
   live performance layer, and the feeling that dinner or drinks can turn into a
   staged show at any point.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/black-rabbit-rose/01.jpg" alt="Black Rabbit Rose photo 1" loading="lazy" />
+</div>
+
 # Black Rabbit Rose
 
 ## Photos

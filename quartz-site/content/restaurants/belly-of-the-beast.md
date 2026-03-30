@@ -20,6 +20,12 @@ standout: >-
   bars lean this hard into a themed secret-room reveal, and the small scale
   makes it feel closer to a mini attraction than a standard back-bar extension.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/belly-of-the-beast/01.jpg" alt="Belly of the Beast photo 1" loading="lazy" />
+</div>
+
 # Belly of the Beast
 
 ## Photos

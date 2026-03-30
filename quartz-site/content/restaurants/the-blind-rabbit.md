@@ -18,6 +18,12 @@ standout: >-
   rotating themed pop-ups make this one of Orange County's strongest immersive
   drinking experiences.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/the-blind-rabbit/01.jpg" alt="The Blind Rabbit photo 1" loading="lazy" />
+</div>
+
 # The Blind Rabbit
 
 ## Photos

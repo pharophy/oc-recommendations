@@ -21,6 +21,12 @@ standout: >-
   layered lighting, theatrical mug service, and enough atmosphere to feel like
   its own destination.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/stowaway/01.jpg" alt="Stowaway photo 1" loading="lazy" />
+</div>
+
 # Stowaway
 
 ## Photos

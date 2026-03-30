@@ -21,6 +21,12 @@ standout: >-
   "hidden date-night room" options if you want something more theatrical than
   standard tasting-room service.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/vienza-cave-speakeasy-at-europa-village/01.webp" alt="Vienza Cave Speakeasy at Europa Village photo 1" loading="lazy" />
+</div>
+
 # Vienza Cave Speakeasy at Europa Village
 
 ## Photos

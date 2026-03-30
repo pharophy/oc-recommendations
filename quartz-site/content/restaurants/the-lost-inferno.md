@@ -21,6 +21,12 @@ standout: >-
   magic-show programming make it feel much more specific than a generic tiki
   room.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/the-lost-inferno/01.png" alt="The Lost Inferno photo 1" loading="lazy" />
+</div>
+
 # The Lost Inferno
 
 ## Photos

@@ -21,6 +21,12 @@ standout: >-
   room, menu language, lighting, and sound cues all support the same playful
   adventure-world fantasy.
 ---
+## Photos
+
+<div class="restaurant-photo-grid">
+  <img src="restaurants/images/trader-sams-enchanted-tiki-bar/01.jpg" alt="Trader Sam&#39;s Enchanted Tiki Bar photo 1" loading="lazy" />
+</div>
+
 # Trader Sam's Enchanted Tiki Bar
 
 ## Photos
