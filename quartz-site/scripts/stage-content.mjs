@@ -333,11 +333,11 @@ function buildCollectionIndex(section, items) {
       const cells = config.columns
         .map((column) => {
           if (column.key === "title") {
-            return `      <td><a href="${escapeHtml(item.link)}">${escapeHtml(item.title)}</a></td>`
+            return `      <td data-label="${escapeHtml(column.label)}"><a href="${escapeHtml(item.link)}">${escapeHtml(item.title)}</a></td>`
           }
 
           const value = Array.isArray(item[column.key]) ? item[column.key].join(", ") : item[column.key]
-          return `      <td>${escapeHtml(value ?? "")}</td>`
+          return `      <td data-label="${escapeHtml(column.label)}">${escapeHtml(value ?? "")}</td>`
         })
         .join("\n")
 
@@ -371,7 +371,7 @@ ${cells}
     '  <div class="collection-index__controls">',
     ...controls,
     "  </div>",
-    `  <p class="collection-index__summary" data-results-summary>Showing ${items.length} ${config.singular}${items.length === 1 ? "" : "s"}</p>`,
+    `  <p class="collection-index__summary" data-results-summary>Showing ${items.length === 1 ? `1 ${config.singular}` : `${items.length} ${config.plural}`}</p>`,
     '  <div class="collection-index__table-wrap">',
     '    <table class="collection-index__table">',
     "      <thead>",
@@ -384,7 +384,7 @@ ${cells}
     "      </tbody>",
     "    </table>",
     "  </div>",
-    `  <p class="collection-index__empty" data-empty-state hidden>No ${config.singular}s match the current filters.</p>`,
+    `  <p class="collection-index__empty" data-empty-state hidden>No ${config.plural} match the current filters.</p>`,
     "</div>",
     "",
   ].join("\n")
@@ -421,19 +421,19 @@ function buildRestaurantIndex(section, restaurants) {
       )}" data-price="${escapeHtml(item.price)}" data-kids="${escapeHtml(
         item.kidsAllowed,
       )}" data-standout="${escapeHtml(item.standout)}">
-      <td class="restaurant-index__thumb-cell">${
+      <td class="restaurant-index__thumb-cell" data-label="Photo">${
         item.thumbnail
           ? `<a href="${escapeHtml(item.link)}" class="restaurant-index__thumb-link"><img src="${escapeHtml(
               item.thumbnail,
             )}" alt="${escapeHtml(`${item.title} thumbnail`)}" loading="lazy" class="restaurant-index__thumb" /></a>`
           : ""
       }</td>
-      <td><a href="${escapeHtml(item.link)}">${escapeHtml(item.title)}</a></td>
-      <td>${escapeHtml(item.area)}</td>
-      <td>${escapeHtml(item.venueType)}</td>
-      <td>${escapeHtml(item.price)}</td>
-      <td>${escapeHtml(item.kidsAllowed)}</td>
-      <td>${escapeHtml(item.standout)}</td>
+      <td data-label="Name"><a href="${escapeHtml(item.link)}">${escapeHtml(item.title)}</a></td>
+      <td data-label="Area">${escapeHtml(item.area)}</td>
+      <td data-label="Type">${escapeHtml(item.venueType)}</td>
+      <td data-label="Price">${escapeHtml(item.price)}</td>
+      <td data-label="Kids Allowed">${escapeHtml(item.kidsAllowed)}</td>
+      <td data-label="Why It Stands Out">${escapeHtml(item.standout)}</td>
     </tr>`
     })
     .join("\n")
