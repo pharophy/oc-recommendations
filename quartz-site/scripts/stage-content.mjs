@@ -12,14 +12,76 @@ const FRONTMATTER_KEYS_TO_KEEP = [
   "tags",
   "area",
   "venueType",
+  "activityType",
+  "natureType",
+  "difficulty",
+  "playgroundType",
+  "eventType",
+  "eventDateLabel",
+  "eventStartDate",
+  "eventEndDate",
+  "eventMonths",
   "website",
   "googleMaps",
   "openTable",
+  "bookingUrl",
   "price",
   "kidsAllowed",
   "description",
   "standout",
 ]
+
+const GENERIC_SECTION_CONFIGS = {
+  activities: {
+    singular: "activity",
+    plural: "activities",
+    columns: [
+      { key: "title", label: "Name", sort: true },
+      { key: "area", label: "Area", filter: true, sort: true },
+      { key: "type", label: "Type", filter: true, sort: true },
+      { key: "price", label: "Price", filter: true, sort: true },
+      { key: "kids", label: "Kids Allowed", filter: true, sort: true },
+      { key: "standout", label: "Why It Stands Out", sort: true },
+    ],
+  },
+  nature: {
+    singular: "nature spot",
+    plural: "nature spots",
+    columns: [
+      { key: "title", label: "Name", sort: true },
+      { key: "area", label: "Area", filter: true, sort: true },
+      { key: "type", label: "Type", filter: true, sort: true },
+      { key: "difficulty", label: "Difficulty", filter: true, sort: true },
+      { key: "kids", label: "Kids Allowed", filter: true, sort: true },
+      { key: "standout", label: "Why It Stands Out", sort: true },
+    ],
+  },
+  playgrounds: {
+    singular: "playground",
+    plural: "playgrounds",
+    columns: [
+      { key: "title", label: "Name", sort: true },
+      { key: "area", label: "Area", filter: true, sort: true },
+      { key: "type", label: "Type", filter: true, sort: true },
+      { key: "price", label: "Price", filter: true, sort: true },
+      { key: "kids", label: "Kids Allowed", filter: true, sort: true },
+      { key: "standout", label: "Why It Stands Out", sort: true },
+    ],
+  },
+  events: {
+    singular: "event",
+    plural: "events",
+    columns: [
+      { key: "title", label: "Name", sort: true },
+      { key: "area", label: "Area", filter: true, sort: true },
+      { key: "type", label: "Type", filter: true, sort: true },
+      { key: "date", label: "Date(s)", sort: true },
+      { key: "months", label: "Month", filter: true, sort: true },
+      { key: "price", label: "Price", filter: true, sort: true },
+      { key: "kids", label: "Kids Allowed", filter: true, sort: true },
+    ],
+  },
+}
 
 async function exists(targetPath) {
   try {
@@ -50,6 +112,15 @@ function escapeHtml(value) {
 
 function normalizeWhitespace(value) {
   return String(value ?? "").replace(/\s+/g, " ").trim()
+}
+
+function normalizeDateValue(value) {
+  if (!value) return ""
+  if (value instanceof Date && !Number.isNaN(value.valueOf())) {
+    return value.toISOString().slice(0, 10)
+  }
+
+  return normalizeWhitespace(value)
 }
 
 function getRelativeLink(fromDir, toPath) {
@@ -166,6 +237,155 @@ function buildGenericSectionIndex(section) {
     section.description,
     "",
     "Use the folder listing below to browse the published notes in this section.",
+    "",
+  ].join("\n")
+}
+
+function getGenericItemData(section, parsed, slug, imageLinks, link) {
+  const data = parsed.data
+  const typeKeyBySection = {
+    activities: "activityType",
+    nature: "natureType",
+    playgrounds: "playgroundType",
+    events: "eventType",
+  }
+
+  const months = Array.isArray(data.eventMonths)
+    ? data.eventMonths.map((value) => normalizeWhitespace(value)).filter(Boolean)
+    : []
+
+  return {
+    slug,
+    title: normalizeWhitespace(data.title ?? slug),
+    area: normalizeWhitespace(data.area ?? ""),
+    type: normalizeWhitespace(data[typeKeyBySection[section.id]] ?? ""),
+    difficulty: normalizeWhitespace(data.difficulty ?? ""),
+    date: normalizeWhitespace(data.eventDateLabel ?? ""),
+    months,
+    price: normalizeWhitespace(data.price ?? ""),
+    kids: normalizeWhitespace(data.kidsAllowed ?? ""),
+    standout: normalizeWhitespace(data.standout ?? ""),
+    description: normalizeWhitespace(data.description ?? ""),
+    thumbnail: imageLinks[0] ?? "",
+    link,
+    sortDate: normalizeDateValue(data.eventStartDate ?? ""),
+  }
+}
+
+function buildCollectionIndex(section, items) {
+  const config = GENERIC_SECTION_CONFIGS[section.id]
+  if (!config) return buildGenericSectionIndex(section)
+
+  const buildSelect = (key, label, options) => {
+    const renderedOptions = options
+      .map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`)
+      .join("")
+
+    return `  <label class="collection-index__field">
+    <span>${escapeHtml(label)}</span>
+    <select data-filter="${escapeHtml(key)}">
+      <option value="">All</option>${renderedOptions}
+    </select>
+  </label>`
+  }
+
+  const filterColumns = config.columns.filter((column) => column.filter)
+  const controls = [
+    '    <label class="collection-index__field collection-index__field--search">',
+    "      <span>Search</span>",
+    '      <input type="search" placeholder="Search names, areas, and standout details" data-filter="search" />',
+    "    </label>",
+    ...filterColumns.map((column) => {
+      const options = [...new Set(items.flatMap((item) => (Array.isArray(item[column.key]) ? item[column.key] : [item[column.key]])).filter(Boolean))].sort()
+      return buildSelect(column.key, column.label, options)
+    }),
+  ]
+
+  const headers = config.columns
+    .map((column) => {
+      if (column.sort) {
+        return `          <th><button type="button" data-sort="${escapeHtml(column.key)}">${escapeHtml(column.label)}</button></th>`
+      }
+
+      return `          <th>${escapeHtml(column.label)}</th>`
+    })
+    .join("\n")
+
+  const rows = items
+    .sort((a, b) => a.title.localeCompare(b.title))
+    .map((item) => {
+      const search = [
+        item.title,
+        item.area,
+        item.type,
+        item.difficulty,
+        item.date,
+        item.months.join(" "),
+        item.price,
+        item.kids,
+        item.standout,
+        item.description,
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase()
+
+      const cells = config.columns
+        .map((column) => {
+          if (column.key === "title") {
+            return `      <td><a href="${escapeHtml(item.link)}">${escapeHtml(item.title)}</a></td>`
+          }
+
+          const value = Array.isArray(item[column.key]) ? item[column.key].join(", ") : item[column.key]
+          return `      <td>${escapeHtml(value ?? "")}</td>`
+        })
+        .join("\n")
+
+      return `    <tr data-search="${escapeHtml(search)}" data-title="${escapeHtml(
+        item.title.toLowerCase(),
+      )}" data-area="${escapeHtml(item.area)}" data-type="${escapeHtml(item.type)}" data-difficulty="${escapeHtml(
+        item.difficulty,
+      )}" data-date="${escapeHtml(item.date)}" data-months="${escapeHtml(item.months.join("|"))}" data-price="${escapeHtml(
+        item.price,
+      )}" data-kids="${escapeHtml(item.kids)}" data-standout="${escapeHtml(item.standout)}" data-sort-date="${escapeHtml(
+        item.sortDate,
+      )}">
+${cells}
+    </tr>`
+    })
+    .join("\n")
+
+  return [
+    "---",
+    `title: ${section.title}`,
+    `description: ${section.description}`,
+    "---",
+    "",
+    `# ${section.title}`,
+    "",
+    section.description,
+    "",
+    "This website version uses a native sortable and filterable table generated from note frontmatter.",
+    "",
+    `<div class="collection-index" data-collection-index="${escapeHtml(section.id)}" data-item-singular="${escapeHtml(config.singular)}" data-item-plural="${escapeHtml(config.plural)}">`,
+    '  <div class="collection-index__controls">',
+    ...controls,
+    "  </div>",
+    `  <p class="collection-index__summary" data-results-summary>Showing ${items.length} ${config.singular}${items.length === 1 ? "" : "s"}</p>`,
+    '  <div class="collection-index__table-wrap">',
+    '    <table class="collection-index__table">',
+    "      <thead>",
+    "        <tr>",
+    headers,
+    "        </tr>",
+    "      </thead>",
+    '      <tbody data-collection-rows>',
+    rows,
+    "      </tbody>",
+    "    </table>",
+    "  </div>",
+    `  <p class="collection-index__empty" data-empty-state hidden>No ${config.singular}s match the current filters.</p>`,
+    "</div>",
     "",
   ].join("\n")
 }
@@ -342,17 +562,13 @@ async function stageSection(section) {
     throw new Error(`Missing section source folder: ${section.source}`)
   }
 
-  const skipRootIndex = section.type === "restaurants"
+  const skipRootIndex = true
   await copySectionDirectory(sourceDir, outputDir, { skipRootIndex })
 
   if (section.type !== "restaurants") {
-    const sourceIndex = path.join(sourceDir, "index.md")
-    if (!(await exists(sourceIndex))) {
-      await fs.writeFile(path.join(outputDir, "index.md"), buildGenericSectionIndex(section), "utf8")
-    }
-
     const sourceMarkdown = await collectMarkdownFiles(sourceDir)
     const noteFiles = sourceMarkdown.filter((filePath) => path.basename(filePath).toLowerCase() !== "index.md")
+    const items = []
 
     for (const filePath of noteFiles) {
       const raw = await fs.readFile(filePath, "utf8")
@@ -372,10 +588,15 @@ async function stageSection(section) {
       const cleanedContent = matter.stringify(contentWithGallery, parsed.data)
       const relativeFromSource = path.relative(sourceDir, filePath)
       const targetOutputPath = path.join(outputDir, relativeFromSource)
+      const indexDir = path.dirname(path.join(outputDir, "index.md"))
+      const link = getRelativeLink(indexDir, targetOutputPath)
 
       await ensureDir(path.dirname(targetOutputPath))
       await fs.writeFile(targetOutputPath, `${cleanedContent.trimEnd()}\n`, "utf8")
+      items.push(getGenericItemData(section, parsed, slug, imageLinks, link))
     }
+
+    await fs.writeFile(path.join(outputDir, "index.md"), buildCollectionIndex(section, items), "utf8")
 
     const markdownFiles = await collectMarkdownFiles(outputDir)
     return {

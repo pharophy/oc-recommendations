@@ -14,7 +14,8 @@ body[saved-theme="dark"] {
   margin-top: 2rem;
 }
 
-.restaurant-index {
+.restaurant-index,
+.collection-index {
   display: grid;
   gap: 1rem;
   margin: 1.5rem 0 2rem;
@@ -38,7 +39,8 @@ body[data-slug="restaurants/index"] .page > #quartz-body {
   }
 }
 
-.restaurant-index__controls {
+.restaurant-index__controls,
+.collection-index__controls {
   display: grid;
   gap: 0.75rem;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
@@ -48,23 +50,28 @@ body[data-slug="restaurants/index"] .page > #quartz-body {
   background: linear-gradient(180deg, var(--section-surface), transparent);
 }
 
-.restaurant-index__field {
+.restaurant-index__field,
+.collection-index__field {
   display: grid;
   gap: 0.35rem;
 }
 
-.restaurant-index__field span {
+.restaurant-index__field span,
+.collection-index__field span {
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
 
-.restaurant-index__field--search {
+.restaurant-index__field--search,
+.collection-index__field--search {
   grid-column: 1 / -1;
 }
 
 .restaurant-index__field input,
-.restaurant-index__field select {
+.restaurant-index__field select,
+.collection-index__field input,
+.collection-index__field select {
   width: 100%;
   border: 1px solid var(--gray);
   border-radius: 0.75rem;
@@ -74,36 +81,44 @@ body[data-slug="restaurants/index"] .page > #quartz-body {
 }
 
 .restaurant-index__summary,
-.restaurant-index__empty {
+.restaurant-index__empty,
+.collection-index__summary,
+.collection-index__empty {
   margin: 0;
   color: var(--darkgray);
 }
 
-.restaurant-index__table-wrap {
+.restaurant-index__table-wrap,
+.collection-index__table-wrap {
   overflow-x: auto;
   border: 1px solid var(--lightgray);
   border-radius: 1rem;
 }
 
-.restaurant-index__table {
+.restaurant-index__table,
+.collection-index__table {
   width: 100%;
   min-width: 76rem;
   border-collapse: collapse;
 }
 
 .restaurant-index__table th,
-.restaurant-index__table td {
+.restaurant-index__table td,
+.collection-index__table th,
+.collection-index__table td {
   padding: 0.9rem 1rem;
   vertical-align: top;
   border-bottom: 1px solid var(--lightgray);
 }
 
-.restaurant-index__table th {
+.restaurant-index__table th,
+.collection-index__table th {
   background: var(--section-surface);
   text-align: left;
 }
 
-.restaurant-index__table th button {
+.restaurant-index__table th button,
+.collection-index__table th button {
   appearance: none;
   background: transparent;
   border: 0;
@@ -114,15 +129,18 @@ body[data-slug="restaurants/index"] .page > #quartz-body {
   padding: 0;
 }
 
-.restaurant-index__table th button[data-active="true"] {
+.restaurant-index__table th button[data-active="true"],
+.collection-index__table th button[data-active="true"] {
   color: var(--section-accent);
 }
 
-.restaurant-index__table tbody tr:hover {
+.restaurant-index__table tbody tr:hover,
+.collection-index__table tbody tr:hover {
   background: var(--highlight);
 }
 
-.restaurant-index__table a {
+.restaurant-index__table a,
+.collection-index__table a {
   color: var(--section-accent);
   font-weight: 700;
 }
@@ -168,6 +186,10 @@ body[data-slug="restaurants/index"] .page > #quartz-body {
 
 @media all and (max-width: 800px) {
   .restaurant-index__table {
+    min-width: 60rem;
+  }
+
+  .collection-index__table {
     min-width: 60rem;
   }
 
