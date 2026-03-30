@@ -1,0 +1,39 @@
+filters:
+  and:
+    - file.inFolder("Nature")
+    - file.ext == "md"
+    - file.hasTag("nature")
+formulas:
+  entry: file.asLink(title)
+properties:
+  formula.entry:
+    displayName: Name
+  area:
+    displayName: Area
+  natureType:
+    displayName: Type
+  difficulty:
+    displayName: Difficulty
+  kidsAllowed:
+    displayName: Kids Allowed
+  standout:
+    displayName: Why It Stands Out
+  website:
+    displayName: Website
+  googleMaps:
+    displayName: Google Maps
+views:
+  - type: table
+    name: All Nature Spots
+    order:
+      - formula.entry
+      - area
+      - natureType
+      - difficulty
+      - kidsAllowed
+      - standout
+    sort:
+      - property: area
+        direction: DESC
+      - property: entry
+        direction: ASC

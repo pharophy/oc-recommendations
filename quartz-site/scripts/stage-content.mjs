@@ -297,10 +297,30 @@ function buildRestaurantPhotoGallery(title, imageLinks) {
   return ["## Photos", "", '<div class="restaurant-photo-grid">', galleryItems, "</div>", ""].join("\n")
 }
 
+function buildGenericPhotoGallery(title, imageLinks) {
+  if (imageLinks.length === 0) return ""
+
+  const galleryItems = imageLinks
+    .map(
+      (imageLink, index) =>
+        `![${title} photo ${index + 1}](${imageLink})`,
+    )
+    .join("\n")
+
+  return ["## Photos", "", galleryItems, ""].join("\n")
+}
+
 function normalizeRestaurantImagePaths(content) {
   return content.replace(
     /(!?\[[^\]]*\]\()images\//g,
     (_, prefix) => `${prefix}restaurants/images/`,
+  )
+}
+
+function normalizeSectionImagePaths(content, output) {
+  return content.replace(
+    /(!?\[[^\]]*\]\()images\//g,
+    (_, prefix) => `${prefix}${output}/images/`,
   )
 }
 
@@ -329,6 +349,32 @@ async function stageSection(section) {
     const sourceIndex = path.join(sourceDir, "index.md")
     if (!(await exists(sourceIndex))) {
       await fs.writeFile(path.join(outputDir, "index.md"), buildGenericSectionIndex(section), "utf8")
+    }
+
+    const sourceMarkdown = await collectMarkdownFiles(sourceDir)
+    const noteFiles = sourceMarkdown.filter((filePath) => path.basename(filePath).toLowerCase() !== "index.md")
+
+    for (const filePath of noteFiles) {
+      const raw = await fs.readFile(filePath, "utf8")
+      const parsed = matter(raw)
+      const slug = path.basename(filePath, ".md")
+      const sourceImagesDir = path.join(path.dirname(filePath), "images", slug)
+      const imageFiles = await collectImageFiles(sourceImagesDir)
+      const imageLinks = imageFiles.map((imagePath) =>
+        path.join(section.output, "images", slug, path.relative(sourceImagesDir, imagePath)).replaceAll("\\", "/"),
+      )
+      const hasEmbeddedImages = /!\[[^\]]*\]\([^)]+\)/.test(parsed.content)
+      const gallery = hasEmbeddedImages
+        ? ""
+        : buildGenericPhotoGallery(normalizeWhitespace(parsed.data.title ?? slug), imageLinks)
+      const normalizedContent = normalizeSectionImagePaths(parsed.content.trimStart(), section.output)
+      const contentWithGallery = [gallery, normalizedContent].filter(Boolean).join("\n")
+      const cleanedContent = matter.stringify(contentWithGallery, parsed.data)
+      const relativeFromSource = path.relative(sourceDir, filePath)
+      const targetOutputPath = path.join(outputDir, relativeFromSource)
+
+      await ensureDir(path.dirname(targetOutputPath))
+      await fs.writeFile(targetOutputPath, `${cleanedContent.trimEnd()}\n`, "utf8")
     }
 
     const markdownFiles = await collectMarkdownFiles(outputDir)

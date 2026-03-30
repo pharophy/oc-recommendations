@@ -1,0 +1,39 @@
+filters:
+  and:
+    - file.inFolder("Events")
+    - file.ext == "md"
+    - file.hasTag("event")
+formulas:
+  entry: file.asLink(title)
+properties:
+  formula.entry:
+    displayName: Name
+  area:
+    displayName: Area
+  eventType:
+    displayName: Type
+  price:
+    displayName: Price
+  kidsAllowed:
+    displayName: Kids Allowed
+  standout:
+    displayName: Why It Stands Out
+  website:
+    displayName: Website
+  bookingUrl:
+    displayName: Tickets
+views:
+  - type: table
+    name: All Events
+    order:
+      - formula.entry
+      - area
+      - eventType
+      - price
+      - kidsAllowed
+      - standout
+    sort:
+      - property: area
+        direction: DESC
+      - property: entry
+        direction: ASC
