@@ -20,6 +20,24 @@ body[saved-theme="dark"] {
   margin: 1.5rem 0 2rem;
 }
 
+body[data-slug="restaurants/index"] .page {
+  max-width: min(1800px, calc(100vw - 2rem));
+}
+
+body[data-slug="restaurants/index"] .page > #quartz-body {
+  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-areas:
+    "grid-sidebar-left grid-header"
+    "grid-sidebar-left grid-center"
+    "grid-sidebar-left grid-footer";
+}
+
+@media all and (max-width: 1200px) {
+  body[data-slug="restaurants/index"] .page {
+    max-width: calc(100vw - 2rem);
+  }
+}
+
 .restaurant-index__controls {
   display: grid;
   gap: 0.75rem;
@@ -69,7 +87,7 @@ body[saved-theme="dark"] {
 
 .restaurant-index__table {
   width: 100%;
-  min-width: 52rem;
+  min-width: 76rem;
   border-collapse: collapse;
 }
 
@@ -109,6 +127,27 @@ body[saved-theme="dark"] {
   font-weight: 700;
 }
 
+.restaurant-index__thumb-cell {
+  width: 7rem;
+  min-width: 7rem;
+}
+
+.restaurant-index__thumb-link {
+  display: block;
+  background: transparent;
+}
+
+.restaurant-index__thumb {
+  display: block;
+  width: 5.5rem;
+  height: 4rem;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  border: 1px solid var(--lightgray);
+  background: var(--section-surface);
+}
+
 .restaurant-photo-grid {
   display: grid;
   gap: 0.85rem;
@@ -125,4 +164,20 @@ body[saved-theme="dark"] {
   border-radius: 0.9rem;
   border: 1px solid var(--lightgray);
   background: var(--section-surface);
+}
+
+@media all and (max-width: 800px) {
+  .restaurant-index__table {
+    min-width: 60rem;
+  }
+
+  .restaurant-index__thumb-cell {
+    width: 5.75rem;
+    min-width: 5.75rem;
+  }
+
+  .restaurant-index__thumb {
+    width: 4.5rem;
+    height: 3.4rem;
+  }
 }

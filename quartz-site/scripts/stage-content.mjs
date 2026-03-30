@@ -201,6 +201,13 @@ function buildRestaurantIndex(section, restaurants) {
       )}" data-price="${escapeHtml(item.price)}" data-kids="${escapeHtml(
         item.kidsAllowed,
       )}" data-standout="${escapeHtml(item.standout)}">
+      <td class="restaurant-index__thumb-cell">${
+        item.thumbnail
+          ? `<a href="${escapeHtml(item.link)}" class="restaurant-index__thumb-link"><img src="${escapeHtml(
+              item.thumbnail,
+            )}" alt="${escapeHtml(`${item.title} thumbnail`)}" loading="lazy" class="restaurant-index__thumb" /></a>`
+          : ""
+      }</td>
       <td><a href="${escapeHtml(item.link)}">${escapeHtml(item.title)}</a></td>
       <td>${escapeHtml(item.area)}</td>
       <td>${escapeHtml(item.venueType)}</td>
@@ -252,6 +259,7 @@ function buildRestaurantIndex(section, restaurants) {
     '    <table class="restaurant-index__table">',
     "      <thead>",
     "        <tr>",
+    '          <th>Photo</th>',
     '          <th><button type="button" data-sort="title">Name</button></th>',
     '          <th><button type="button" data-sort="area">Area</button></th>',
     '          <th><button type="button" data-sort="type">Type</button></th>',
@@ -378,6 +386,7 @@ async function stageSection(section) {
       kidsAllowed: normalizeWhitespace(parsed.data.kidsAllowed ?? ""),
       standout: normalizeWhitespace(parsed.data.standout ?? ""),
       description: normalizeWhitespace(parsed.data.description ?? ""),
+      thumbnail: imageLinks[0] ?? "",
       link: getRelativeLink(indexDir, targetOutputPath),
     })
   }
