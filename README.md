@@ -2,6 +2,8 @@
 
 This repository is an Obsidian-authored content workspace with a Quartz-powered static site in `quartz-site/`.
 
+Public site: https://pharophy.github.io/oc-recommendations/
+
 ## Publishing Workflow
 
 - Author notes in top-level content folders such as `Restaurants/`, `Activities/`, `Nature/`, `Playgrounds/`, and `Events/`
@@ -25,6 +27,8 @@ Current section folders:
 ## GitHub Pages
 
 The repository includes a GitHub Actions workflow at `.github/workflows/deploy.yml` that builds the Quartz site and deploys `quartz-site/public/` to GitHub Pages from the `main` branch.
+
+Current public URL: https://pharophy.github.io/oc-recommendations/
 
 Before deploying, update the `siteBaseUrl` in `publishing.config.mjs` and the `baseUrl` value in `quartz-site/quartz.config.ts` to match your actual GitHub Pages URL.
 
