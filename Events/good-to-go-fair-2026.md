@@ -7,6 +7,10 @@ bookingUrl: https://www.pretendcity.org/good-to-go-fair/
 googleMaps: https://www.google.com/maps/search/?api=1&query=Pretend+City+29+Hubble+Irvine+CA+92618
 price: Free
 kidsAllowed: Yes
+eventDateLabel: April 18, 2026
+eventStartDate: 2026-04-18
+eventMonths:
+  - April
 tags:
   - event
 ---
@@ -38,3 +42,4 @@ This is not just entertainment. It has a stronger function for families with you
 
 - https://www.pretendcity.org/good-to-go-fair/
 - https://www.pretendcity.org/
+

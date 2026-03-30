@@ -7,6 +7,10 @@ bookingUrl: https://yourirvine.org
 googleMaps: https://www.google.com/maps/search/?api=1&query=Quail+Hill+Trailhead+Irvine+CA
 price: Free
 kidsAllowed: Yes
+eventDateLabel: April 18, 2026
+eventStartDate: 2026-04-18
+eventMonths:
+  - April
 tags:
   - event
 ---
@@ -40,3 +44,4 @@ For families or casual hikers, this is a strong entry point into Irvine's open-s
 
 - https://cityofirvine.org/node/90712
 - https://cityofirvine.org/open-space-trails/things-do
+

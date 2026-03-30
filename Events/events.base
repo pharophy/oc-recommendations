@@ -12,6 +12,10 @@ properties:
     displayName: Area
   eventType:
     displayName: Type
+  eventDateLabel:
+    displayName: Date(s)
+  eventMonths:
+    displayName: Event Months
   price:
     displayName: Price
   kidsAllowed:
@@ -29,11 +33,13 @@ views:
       - formula.entry
       - area
       - eventType
+      - eventDateLabel
+      - eventMonths
       - price
       - kidsAllowed
       - standout
     sort:
-      - property: area
-        direction: DESC
+      - property: eventStartDate
+        direction: ASC
       - property: entry
         direction: ASC

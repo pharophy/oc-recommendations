@@ -8,6 +8,12 @@ googleMaps: >-
   https://www.google.com/maps/search/?api=1&query=88+Fair+Drive+Costa+Mesa+CA+92626
 price: $$
 kidsAllowed: 'Yes'
+eventDateLabel: 'July 17-August 16, 2026'
+eventStartDate: 2026-07-17T00:00:00.000Z
+eventEndDate: 2026-08-16T00:00:00.000Z
+eventMonths:
+  - July
+  - August
 tags:
   - event
 ---

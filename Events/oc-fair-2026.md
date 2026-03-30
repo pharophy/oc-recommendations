@@ -7,6 +7,12 @@ bookingUrl: https://ocfair.com/oc-fair/admission
 googleMaps: https://www.google.com/maps/search/?api=1&query=88+Fair+Drive+Costa+Mesa+CA+92626
 price: $$
 kidsAllowed: Yes
+eventDateLabel: July 17-August 16, 2026
+eventStartDate: 2026-07-17
+eventEndDate: 2026-08-16
+eventMonths:
+  - July
+  - August
 tags:
   - event
 ---
@@ -40,3 +46,4 @@ Its scale matters. Even for locals, the fair functions more like a seasonal ritu
 
 - https://ocfair.com/oc-fair/
 - https://ocfair.com/oc-fair/be-a-part-of-the-fair/vendors/application/
+

@@ -7,6 +7,11 @@ bookingUrl: https://www.festivalofwhales.com/
 googleMaps: https://www.google.com/maps/search/?api=1&query=34675+Golden+Lantern+Dana+Point+CA+92629
 price: Varies
 kidsAllowed: Yes
+eventDateLabel: March 6-8, 2026
+eventStartDate: 2026-03-06
+eventEndDate: 2026-03-08
+eventMonths:
+  - March
 tags:
   - event
 ---
@@ -39,3 +44,4 @@ It has the kind of built-in sense of place that many festivals do not. Even with
 - https://www.festivalofwhales.com/
 - https://festivalofwhales.com/fowparade/
 - https://festivalofwhales.com/modern-makers-mart/
+

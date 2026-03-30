@@ -10,6 +10,10 @@ googleMaps: >-
   https://www.google.com/maps/search/?api=1&query=Lions+Park+Event+Lawn+1845+Park+Ave+Costa+Mesa+CA
 price: Free
 kidsAllowed: 'Yes'
+eventDateLabel: 'April 4, 2026'
+eventStartDate: 2026-04-04T00:00:00.000Z
+eventMonths:
+  - April
 tags:
   - event
 ---

@@ -18,22 +18,22 @@ Currently published notes: **24**
 
 Unique activities, immersive attractions, unusual date ideas, and standout things to do across Orange County and nearby Southern California.
 
-Currently published notes: **4**
+Currently published notes: **8**
 
 ### [Nature](./nature/)
 
 Scenic nature spots, hikes, overlooks, gardens, beaches, and other outdoor standouts across Orange County and nearby Southern California.
 
-Currently published notes: **4**
+Currently published notes: **7**
 
 ### [Playgrounds](./playgrounds/)
 
 Unique playgrounds, destination parks, imaginative play spaces, and standout family outdoor play spots across Orange County and nearby Southern California.
 
-Currently published notes: **4**
+Currently published notes: **6**
 
 ### [Events](./events/)
 
 Special events, festivals, seasonal happenings, markets, and limited-time experiences across Orange County and nearby Southern California.
 
-Currently published notes: **5**
+Currently published notes: **23**

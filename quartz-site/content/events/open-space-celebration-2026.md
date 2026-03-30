@@ -7,6 +7,10 @@ bookingUrl: 'https://yourirvine.org'
 googleMaps: 'https://www.google.com/maps/search/?api=1&query=Quail+Hill+Trailhead+Irvine+CA'
 price: Free
 kidsAllowed: 'Yes'
+eventDateLabel: 'April 18, 2026'
+eventStartDate: 2026-04-18T00:00:00.000Z
+eventMonths:
+  - April
 tags:
   - event
 ---

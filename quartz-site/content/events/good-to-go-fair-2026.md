@@ -8,6 +8,10 @@ googleMaps: >-
   https://www.google.com/maps/search/?api=1&query=Pretend+City+29+Hubble+Irvine+CA+92618
 price: Free
 kidsAllowed: 'Yes'
+eventDateLabel: 'April 18, 2026'
+eventStartDate: 2026-04-18T00:00:00.000Z
+eventMonths:
+  - April
 tags:
   - event
 ---

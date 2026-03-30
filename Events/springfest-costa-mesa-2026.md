@@ -7,6 +7,10 @@ bookingUrl: https://www.costamesaca.gov/government/departments-and-divisions/par
 googleMaps: https://www.google.com/maps/search/?api=1&query=Lions+Park+Event+Lawn+1845+Park+Ave+Costa+Mesa+CA
 price: Free
 kidsAllowed: Yes
+eventDateLabel: April 4, 2026
+eventStartDate: 2026-04-04
+eventMonths:
+  - April
 tags:
   - event
 ---
@@ -38,3 +42,4 @@ The 2026 pirate theme gives it more personality than a standard egg-hunt event. 
 
 - https://www.costamesaca.gov/government/departments-and-divisions/parks-and-community-services/events-activities/spring-fest
 - https://www.costamesaca.gov/government/departments-and-divisions/parks-and-community-services
+

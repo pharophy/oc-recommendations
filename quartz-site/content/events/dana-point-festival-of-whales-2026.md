@@ -8,6 +8,11 @@ googleMaps: >-
   https://www.google.com/maps/search/?api=1&query=34675+Golden+Lantern+Dana+Point+CA+92629
 price: Varies
 kidsAllowed: 'Yes'
+eventDateLabel: 'March 6-8, 2026'
+eventStartDate: 2026-03-06T00:00:00.000Z
+eventEndDate: 2026-03-08T00:00:00.000Z
+eventMonths:
+  - March
 tags:
   - event
 ---
