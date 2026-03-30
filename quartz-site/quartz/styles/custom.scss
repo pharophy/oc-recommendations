@@ -39,6 +39,17 @@ body[data-slug="restaurants/index"] .page > #quartz-body {
   }
 }
 
+@media all and (max-width: 900px) {
+  body[data-slug="restaurants/index"] .page > #quartz-body {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "grid-header"
+      "grid-center"
+      "grid-sidebar-left"
+      "grid-footer";
+  }
+}
+
 .restaurant-index__controls,
 .collection-index__controls {
   display: grid;
@@ -274,5 +285,25 @@ body[data-slug="restaurants/index"] .page > #quartz-body {
   .restaurant-index__table td[data-label="Why It Stands Out"],
   .collection-index__table td[data-label="Why It Stands Out"] {
     display: none;
+  }
+
+  .restaurant-index__table td[data-label="Photo"] {
+    display: block;
+  }
+
+  .restaurant-index__table td[data-label="Photo"]::before,
+  .restaurant-index__table td[data-label="Name"]::before {
+    display: none;
+  }
+
+  .restaurant-index__thumb {
+    width: 100%;
+    max-width: 9rem;
+    height: 6rem;
+  }
+
+  .restaurant-index__table td[data-label="Name"] a {
+    font-size: 1rem;
+    line-height: 1.35;
   }
 }
