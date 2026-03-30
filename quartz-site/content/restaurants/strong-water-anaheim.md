@@ -23,9 +23,9 @@ standout: >-
 
 ## Photos
 
-![Strong Water interior](images/strong-water-anaheim/01.jpg)
-![Strong Water cocktail](images/strong-water-anaheim/02.jpg)
-![Strong Water themed drink](images/strong-water-anaheim/03.jpg)
+![Strong Water interior](restaurants/images/strong-water-anaheim/01.jpg)
+![Strong Water cocktail](restaurants/images/strong-water-anaheim/02.jpg)
+![Strong Water themed drink](restaurants/images/strong-water-anaheim/03.jpg)
 
 Photo sources:
 - https://images.squarespace-cdn.com/content/v1/5ca06bbde66669098db23415/1641375606129-HWC51I9OYNNNY8P9S165/STRONGWATER040121-3.jpg

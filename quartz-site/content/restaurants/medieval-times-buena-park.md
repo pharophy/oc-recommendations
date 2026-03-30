@@ -22,8 +22,8 @@ standout: >-
 
 ## Photos
 
-![Medieval Times castle](images/medieval-times-buena-park/01.jpg)
-![Medieval Times jousting](images/medieval-times-buena-park/02.jpg)
+![Medieval Times castle](restaurants/images/medieval-times-buena-park/01.jpg)
+![Medieval Times jousting](restaurants/images/medieval-times-buena-park/02.jpg)
 
 Photo sources:
 - https://medt-refresh.imgix.net/wp-content/uploads/2020/03/29014350/castle-ca.jpg

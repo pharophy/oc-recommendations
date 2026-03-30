@@ -25,7 +25,7 @@ standout: >-
 
 ## Photos
 
-![52 Remedies interior](images/realm-of-the-52-remedies/03.jpg)
+![52 Remedies interior](restaurants/images/realm-of-the-52-remedies/03.jpg)
 
 Photo sources:
 - https://images.squarespace-cdn.com/content/v1/608b4cd455f6d26840c8ae48/1619757824575-P5SUTVGUSIQH1YIQKSNE/CT%2BFall%2B2019.jpg

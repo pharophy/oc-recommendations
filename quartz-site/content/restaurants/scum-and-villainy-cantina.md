@@ -23,7 +23,7 @@ standout: >-
 
 ## Photos
 
-![Scum and Villainy interior](images/scum-and-villainy-cantina/01.jpg)
+![Scum and Villainy interior](restaurants/images/scum-and-villainy-cantina/01.jpg)
 
 Photo sources:
 - https://scumandvillainycantina.com/wp-content/uploads/2021/04/J-scaled.jpg

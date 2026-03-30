@@ -22,8 +22,8 @@ standout: >-
 
 ## Photos
 
-![insideOUT dining room and atrium](images/insideout/02.jpg)
-![insideOUT patio seating detail](images/insideout/03.jpg)
+![insideOUT dining room and atrium](restaurants/images/insideout/02.jpg)
+![insideOUT patio seating detail](restaurants/images/insideout/03.jpg)
 
 Photo sources:
 - https://static.spotapps.co/web/insideoutsd--com/custom/about_us_back.jpg

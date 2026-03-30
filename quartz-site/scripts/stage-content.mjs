@@ -289,6 +289,13 @@ function buildRestaurantPhotoGallery(title, imageLinks) {
   return ["## Photos", "", '<div class="restaurant-photo-grid">', galleryItems, "</div>", ""].join("\n")
 }
 
+function normalizeRestaurantImagePaths(content) {
+  return content.replace(
+    /(!?\[[^\]]*\]\()images\//g,
+    (_, prefix) => `${prefix}restaurants/images/`,
+  )
+}
+
 function getVenueFrontmatter(data) {
   const frontmatter = {}
   for (const key of FRONTMATTER_KEYS_TO_KEEP) {
@@ -338,10 +345,16 @@ async function stageSection(section) {
     const targetOutputPath = path.join(outputDir, relativeFromSource)
     const indexDir = path.dirname(path.join(outputDir, "index.md"))
     const sourceImagesDir = path.join(path.dirname(filePath), "images", path.basename(filePath, ".md"))
-    const outputImagesDir = path.join(path.dirname(targetOutputPath), "images", path.basename(filePath, ".md"))
     const imageFiles = await collectImageFiles(sourceImagesDir)
     const imageLinks = imageFiles.map((imagePath) =>
-      getRelativeLink(path.dirname(targetOutputPath), path.join(outputImagesDir, path.relative(sourceImagesDir, imagePath))),
+      path
+        .join(
+          "restaurants",
+          "images",
+          path.basename(filePath, ".md"),
+          path.relative(sourceImagesDir, imagePath),
+        )
+        .replaceAll("\\", "/"),
     )
     const hasEmbeddedImages = /!\[[^\]]*\]\([^)]+\)/.test(parsed.content)
     const gallery = hasEmbeddedImages
@@ -350,7 +363,8 @@ async function stageSection(section) {
           normalizeWhitespace(parsed.data.title ?? path.basename(filePath, ".md")),
           imageLinks,
         )
-    const contentWithGallery = [gallery, parsed.content.trimStart()].filter(Boolean).join("\n")
+    const normalizedContent = normalizeRestaurantImagePaths(parsed.content.trimStart())
+    const contentWithGallery = [gallery, normalizedContent].filter(Boolean).join("\n")
     const cleanedContent = matter.stringify(contentWithGallery, getVenueFrontmatter(parsed.data))
 
     await ensureDir(path.dirname(targetOutputPath))

@@ -23,8 +23,8 @@ standout: >-
 
 ## Photos
 
-![Elixir interior fantasy room](images/elixir-wizard-academy-and-boba-tea-bar/02.jpg)
-![Elixir themed drinks](images/elixir-wizard-academy-and-boba-tea-bar/03.webp)
+![Elixir interior fantasy room](restaurants/images/elixir-wizard-academy-and-boba-tea-bar/02.jpg)
+![Elixir themed drinks](restaurants/images/elixir-wizard-academy-and-boba-tea-bar/03.webp)
 
 Photo sources:
 - https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/UQSdFejO14eTsw0wtAGk/media/6999458608245e73342867c9.jpg
