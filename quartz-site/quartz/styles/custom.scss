@@ -270,4 +270,9 @@ body[data-slug="restaurants/index"] .page > #quartz-body {
     width: min(100%, 5rem);
     height: 3.5rem;
   }
+
+  .restaurant-index__table td[data-label="Why It Stands Out"],
+  .collection-index__table td[data-label="Why It Stands Out"] {
+    display: none;
+  }
 }
