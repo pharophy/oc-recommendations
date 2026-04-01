@@ -22,8 +22,10 @@ Use the `events.base` view in Obsidian and filter `Event Months` to a month like
 | [[good-to-go-fair-2026|Good To Go Fair 2026]] | Irvine / Orange County | Family resource fair | April 18, 2026 | Free | Yes |
 | [[open-space-celebration-2026|Open Space Celebration 2026]] | Irvine / Orange County | Guided outdoor community event | April 18, 2026 | Free | Yes |
 | [[parks-after-dark-santiago-oaks-apr-18-2026|Parks After Dark at Santiago Oaks on April 18, 2026]] | Orange / Orange County | Guided nighttime nature hike | April 18, 2026 | Free | Mixed / Time-dependent |
+| [[ocbc-hanamatsuri-festival-2026|OCBC Hanamatsuri Festival 2026]] | Anaheim / Orange County | Japanese cultural community festival | April 18-19, 2026 | Free | Yes |
 | [[bowers-japanese-cherry-blossom-festival-2026|Bowers Japanese Cherry Blossom Festival 2026]] | Santa Ana / Orange County | Japanese cultural family festival | April 19, 2026 | Free | Yes |
 | [[patchwork-show-tustin-2026|Patchwork Show Tustin 2026]] | Tustin / Orange County | Maker market / downtown street fair | May 17, 2026 | Free | Yes |
+| [[oc-lebanese-cultural-festival-2026|OC Lebanese Cultural Festival 2026]] | Orange / Orange County | Lebanese cultural food festival | June 5-7, 2026 | Varies | Yes |
 | [[sawdust-art-festival-2026|Sawdust Art Festival 2026]] | Laguna Beach / Orange County | Summer art festival | Late June through late August 2026 | Varies | Yes |
 | [[oak-canyon-nature-nights-2026|Oak Canyon Nature Nights 2026]] | Anaheim Hills / Orange County | Summer evening nature series | June 24-August 5, 2026 | Free | Yes |
 | [[oc-fair-2026|OC Fair 2026]] | Costa Mesa / Orange County | Major county fair | July 17-August 16, 2026 | $$ | Yes |

@@ -18,13 +18,13 @@ This website version uses a native sortable and filterable table generated from 
   <label class="collection-index__field">
     <span>Area</span>
     <select data-filter="area">
-      <option value="">All</option><option value="Garden Grove / Orange County">Garden Grove / Orange County</option><option value="Huntington Beach / Orange County">Huntington Beach / Orange County</option><option value="Irvine / Orange County">Irvine / Orange County</option><option value="North Tustin / Orange County">North Tustin / Orange County</option>
+      <option value="">All</option><option value="Garden Grove / Orange County">Garden Grove / Orange County</option><option value="Huntington Beach / Orange County">Huntington Beach / Orange County</option><option value="Irvine / Orange County">Irvine / Orange County</option><option value="Laguna Hills / Orange County">Laguna Hills / Orange County</option><option value="North Tustin / Orange County">North Tustin / Orange County</option>
     </select>
   </label>
   <label class="collection-index__field">
     <span>Type</span>
     <select data-filter="type">
-      <option value="">All</option><option value="Adventure playground">Adventure playground</option><option value="Destination park playground">Destination park playground</option><option value="Inclusive / accessible playground">Inclusive / accessible playground</option><option value="Inclusive / sensory destination playground">Inclusive / sensory destination playground</option><option value="Nature-themed playground park">Nature-themed playground park</option><option value="Themed destination playground">Themed destination playground</option>
+      <option value="">All</option><option value="Adventure playground">Adventure playground</option><option value="Destination park playground">Destination park playground</option><option value="Inclusive / accessible playground">Inclusive / accessible playground</option><option value="Inclusive / sensory destination playground">Inclusive / sensory destination playground</option><option value="Nature-themed playground park">Nature-themed playground park</option><option value="Paleontology-themed destination playground">Paleontology-themed destination playground</option><option value="Themed destination playground">Themed destination playground</option>
     </select>
   </label>
   <label class="collection-index__field">
@@ -40,7 +40,7 @@ This website version uses a native sortable and filterable table generated from 
     </select>
   </label>
   </div>
-  <p class="collection-index__summary" data-results-summary>Showing 6 playgrounds</p>
+  <p class="collection-index__summary" data-results-summary>Showing 7 playgrounds</p>
   <div class="collection-index__table-wrap">
     <table class="collection-index__table">
       <thead>
@@ -93,6 +93,14 @@ This website version uses a native sortable and filterable table generated from 
       <td data-label="Price">Free</td>
       <td data-label="Kids Allowed">Yes</td>
       <td data-label="Why It Stands Out"></td>
+    </tr>
+    <tr data-search="prehistoric playground laguna hills laguna hills / orange county paleontology-themed destination playground free yes the site-specific fossil and whale-skeleton theme makes this one of the best educational playgrounds in orange county, not just a park with a dinosaur sign tacked onto it." data-title="prehistoric playground laguna hills" data-area="Laguna Hills / Orange County" data-type="Paleontology-themed destination playground" data-difficulty="" data-date="" data-months="" data-price="Free" data-kids="Yes" data-standout="The site-specific fossil and whale-skeleton theme makes this one of the best educational playgrounds in Orange County, not just a park with a dinosaur sign tacked onto it." data-sort-date="">
+      <td data-label="Name"><a href="./prehistoric-playground-laguna-hills.md">Prehistoric Playground Laguna Hills</a></td>
+      <td data-label="Area">Laguna Hills / Orange County</td>
+      <td data-label="Type">Paleontology-themed destination playground</td>
+      <td data-label="Price">Free</td>
+      <td data-label="Kids Allowed">Yes</td>
+      <td data-label="Why It Stands Out">The site-specific fossil and whale-skeleton theme makes this one of the best educational playgrounds in Orange County, not just a park with a dinosaur sign tacked onto it.</td>
     </tr>
     <tr data-search="sweet shade universal playground irvine / orange county inclusive / sensory destination playground free yes adaptive swings, a sensory garden, multigenerational play, and an outer-space theme make this one of the most thoughtfully designed playgrounds in oc." data-title="sweet shade universal playground" data-area="Irvine / Orange County" data-type="Inclusive / sensory destination playground" data-difficulty="" data-date="" data-months="" data-price="Free" data-kids="Yes" data-standout="Adaptive swings, a sensory garden, multigenerational play, and an outer-space theme make this one of the most thoughtfully designed playgrounds in OC." data-sort-date="">
       <td data-label="Name"><a href="./sweet-shade-universal-playground.md">Sweet Shade Universal Playground</a></td>

@@ -11,6 +11,7 @@ These are Orange County playground picks with clear destination value, whether t
 | [[crawford-canyon-park|Crawford Canyon Park]] | North Tustin | Nature-themed playground park | Free | Yes | A newer OC park with dual playgrounds, trails, and enough infrastructure to make it feel intentionally designed for longer visits. |
 | [[great-park-kids-rock-playground|Great Park Kids Rock Playground]] | Irvine | Destination park playground | Free | Yes | A large modern play zone with climbing, sand, and add-on attractions nearby. |
 | [[harriett-m-wieder-inclusive-playground|Harriett M. Wieder Inclusive Playground]] | Huntington Beach | Inclusive / accessible playground | Free | Yes | A major accessibility-focused redesign with mobility-device-friendly play features. |
+| [[prehistoric-playground-laguna-hills|Prehistoric Playground Laguna Hills]] | Laguna Hills | Paleontology-themed destination playground | Free | Yes | The whale skeleton climber and local fossil-history design make it much more specific and memorable than a generic dinosaur-themed park. |
 | [[sweet-shade-universal-playground|Sweet Shade Universal Playground]] | Irvine | Inclusive / sensory destination playground | Free | Yes | Adaptive swings, a sensory garden, and multigenerational design make it unusually thoughtful and versatile. |
 
 Use the `playgrounds.base` view in Obsidian for filtering once the collection grows.

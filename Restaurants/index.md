@@ -1,13 +1,13 @@
 # Immersive Restaurants and Experiences
 
-_Generated on: March 28, 2026_  
+_Generated on: March 31, 2026_  
 _Scope: Orange County, Los Angeles, Temecula, and San Diego_
 
 ## Summary
 
 This index favors places that feel transportive, theatrical, hidden, or unusually memorable. The list mixes restaurants, bars, speakeasies, and dinner-show venues because the goal is immersion rather than strict fine-dining format.
 
-This refresh adds Orange County-heavy follow-up options that were active, recently bookable, or recently surfaced on official sites in March 2026: `Stowaway`, `Belly of the Beast`, `The Lost Inferno`, `Momoku No Usagi`, and `Royal Hawaiian`, alongside the broader SoCal additions from the prior pass.
+This refresh adds more "experience-first" options, especially ones that overlap with the appeal of `Pan Am Experience`: transportive staging, theatrical service, nostalgia, or a clear story built into the meal. The newest adds are `Pan Am Experience`, `Maison Kasai`, `Le Petit Chef Los Angeles`, and `Queen Mary Royal Sunday Brunch`.
 
 ## Index
 

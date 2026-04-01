@@ -8,6 +8,7 @@ These are Orange County activities with a stronger hook than a standard museum s
 | --- | --- | --- | --- | --- | --- |
 | [[great-park-balloon-and-carousel|Great Park Balloon & Carousel]] | Irvine | Observation ride / family attraction | $$ | Yes | A tethered balloon ascent plus carousel gives you a skyline-view outing without leaving OC. |
 | [[heritage-museum-of-orange-county|Heritage Museum of Orange County]] | Santa Ana | Living history museum / historic grounds | Varies | Yes | Historic buildings and strong community programming give it more atmosphere than a standard museum stop. |
+| [[lyon-air-museum|Lyon Air Museum]] | Santa Ana | Aviation museum / historic aircraft hangar | $ | Yes | Real aircraft in a working-airport setting give this one much stronger scale and atmosphere than a standard transport museum. |
 | [[mission-san-juan-capistrano|Mission San Juan Capistrano]] | San Juan Capistrano | Historic landmark / museum gardens | $$ | Yes | One of the most region-specific experiences in OC, with history, gardens, and hands-on kid activities. |
 | [[oc-zoo-at-irvine-regional-park|OC Zoo at Irvine Regional Park]] | Orange | Small zoo / park attraction | $ | Yes | The zoo is tiny, easy, and pairs unusually well with train rides, paddle boats, and the rest of Irvine Regional Park. |
 | [[pretend-city-childrens-museum|Pretend City Children's Museum]] | Irvine | Children's museum / developmental play | $$ | Yes | One of the strongest child-development outings in OC, built around role play and early learning. |

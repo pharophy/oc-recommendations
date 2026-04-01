@@ -18,13 +18,13 @@ This website version uses a native sortable and filterable table generated from 
   <label class="collection-index__field">
     <span>Area</span>
     <select data-filter="area">
-      <option value="">All</option><option value="Aliso Viejo / Orange County">Aliso Viejo / Orange County</option><option value="Anaheim Hills / Orange County">Anaheim Hills / Orange County</option><option value="Brea / Orange County">Brea / Orange County</option><option value="Foothill Ranch / Orange County">Foothill Ranch / Orange County</option><option value="Huntington Beach / Orange County">Huntington Beach / Orange County</option><option value="Laguna Beach / Orange County">Laguna Beach / Orange County</option><option value="Silverado / Orange County">Silverado / Orange County</option>
+      <option value="">All</option><option value="Aliso Viejo / Orange County">Aliso Viejo / Orange County</option><option value="Anaheim Hills / Orange County">Anaheim Hills / Orange County</option><option value="Brea / Orange County">Brea / Orange County</option><option value="Foothill Ranch / Orange County">Foothill Ranch / Orange County</option><option value="Huntington Beach / Orange County">Huntington Beach / Orange County</option><option value="Laguna Beach / Orange County">Laguna Beach / Orange County</option><option value="Laguna Hills / Orange County">Laguna Hills / Orange County</option><option value="Silverado / Orange County">Silverado / Orange County</option>
     </select>
   </label>
   <label class="collection-index__field">
     <span>Type</span>
     <select data-filter="type">
-      <option value="">All</option><option value="Cave hike / canyon trail">Cave hike / canyon trail</option><option value="Nature center / streamside trails">Nature center / streamside trails</option><option value="Redwood grove walk">Redwood grove walk</option><option value="Scenic hike / red rock canyon">Scenic hike / red rock canyon</option><option value="Scenic hike / red rock overlook">Scenic hike / red rock overlook</option><option value="Tidepools / coastal nature spot">Tidepools / coastal nature spot</option><option value="Wetlands walk / birding spot">Wetlands walk / birding spot</option>
+      <option value="">All</option><option value="Cave hike / canyon trail">Cave hike / canyon trail</option><option value="Fossil site / geology stop">Fossil site / geology stop</option><option value="Nature center / streamside trails">Nature center / streamside trails</option><option value="Redwood grove walk">Redwood grove walk</option><option value="Scenic hike / red rock canyon">Scenic hike / red rock canyon</option><option value="Scenic hike / red rock overlook">Scenic hike / red rock overlook</option><option value="Tidepools / coastal nature spot">Tidepools / coastal nature spot</option><option value="Wetlands walk / birding spot">Wetlands walk / birding spot</option>
     </select>
   </label>
   <label class="collection-index__field">
@@ -40,7 +40,7 @@ This website version uses a native sortable and filterable table generated from 
     </select>
   </label>
   </div>
-  <p class="collection-index__summary" data-results-summary>Showing 7 nature spots</p>
+  <p class="collection-index__summary" data-results-summary>Showing 8 nature spots</p>
   <div class="collection-index__table-wrap">
     <table class="collection-index__table">
       <thead>
@@ -85,6 +85,14 @@ This website version uses a native sortable and filterable table generated from 
       <td data-label="Difficulty">Moderate</td>
       <td data-label="Kids Allowed">Mixed / Time-dependent</td>
       <td data-label="Why It Stands Out">A cave destination and shaded canyon setting make this feel more adventurous and unusual than a standard OC hike.</td>
+    </tr>
+    <tr data-search="fossil reef park laguna hills / orange county fossil site / geology stop easy yes it preserves the only surviving portion of orange county&#39;s 17-million-year-old fossil reef, which makes it one of the most region-specific geology stops in the county." data-title="fossil reef park" data-area="Laguna Hills / Orange County" data-type="Fossil site / geology stop" data-difficulty="Easy" data-date="" data-months="" data-price="" data-kids="Yes" data-standout="It preserves the only surviving portion of Orange County&#39;s 17-million-year-old fossil reef, which makes it one of the most region-specific geology stops in the county." data-sort-date="">
+      <td data-label="Name"><a href="./fossil-reef-park.md">Fossil Reef Park</a></td>
+      <td data-label="Area">Laguna Hills / Orange County</td>
+      <td data-label="Type">Fossil site / geology stop</td>
+      <td data-label="Difficulty">Easy</td>
+      <td data-label="Kids Allowed">Yes</td>
+      <td data-label="Why It Stands Out">It preserves the only surviving portion of Orange County&#39;s 17-million-year-old fossil reef, which makes it one of the most region-specific geology stops in the county.</td>
     </tr>
     <tr data-search="oak canyon nature center anaheim hills / orange county nature center / streamside trails easy yes a year-round stream, shaded canyon setting, and small interpretive center make this one of the easiest high-payoff kid-friendly nature outings in north oc." data-title="oak canyon nature center" data-area="Anaheim Hills / Orange County" data-type="Nature center / streamside trails" data-difficulty="Easy" data-date="" data-months="" data-price="" data-kids="Yes" data-standout="A year-round stream, shaded canyon setting, and small interpretive center make this one of the easiest high-payoff kid-friendly nature outings in north OC." data-sort-date="">
       <td data-label="Name"><a href="./oak-canyon-nature-center.md">Oak Canyon Nature Center</a></td>

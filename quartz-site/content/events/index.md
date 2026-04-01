@@ -18,13 +18,13 @@ This website version uses a native sortable and filterable table generated from 
   <label class="collection-index__field">
     <span>Area</span>
     <select data-filter="area">
-      <option value="">All</option><option value="Anaheim Hills / Orange County">Anaheim Hills / Orange County</option><option value="Buena Park / Orange County">Buena Park / Orange County</option><option value="Costa Mesa / Orange County">Costa Mesa / Orange County</option><option value="Dana Point / Orange County">Dana Point / Orange County</option><option value="Irvine / Orange County">Irvine / Orange County</option><option value="Laguna Beach / Orange County">Laguna Beach / Orange County</option><option value="Orange / Orange County">Orange / Orange County</option><option value="Santa Ana / Orange County">Santa Ana / Orange County</option><option value="Tustin / Orange County">Tustin / Orange County</option>
+      <option value="">All</option><option value="Anaheim / Orange County">Anaheim / Orange County</option><option value="Anaheim Hills / Orange County">Anaheim Hills / Orange County</option><option value="Buena Park / Orange County">Buena Park / Orange County</option><option value="Costa Mesa / Orange County">Costa Mesa / Orange County</option><option value="Dana Point / Orange County">Dana Point / Orange County</option><option value="Irvine / Orange County">Irvine / Orange County</option><option value="Laguna Beach / Orange County">Laguna Beach / Orange County</option><option value="Orange / Orange County">Orange / Orange County</option><option value="Santa Ana / Orange County">Santa Ana / Orange County</option><option value="Tustin / Orange County">Tustin / Orange County</option>
     </select>
   </label>
   <label class="collection-index__field">
     <span>Type</span>
     <select data-filter="type">
-      <option value="">All</option><option value="Asian cultural family festival">Asian cultural family festival</option><option value="Coastal festival">Coastal festival</option><option value="Dia de los Muertos celebration">Dia de los Muertos celebration</option><option value="Family resource fair">Family resource fair</option><option value="Free family art workshops">Free family art workshops</option><option value="Guided junior ranger program">Guided junior ranger program</option><option value="Guided nighttime nature hike">Guided nighttime nature hike</option><option value="Guided outdoor community event">Guided outdoor community event</option><option value="Japanese cultural family festival">Japanese cultural family festival</option><option value="Japanese cultural food festival">Japanese cultural food festival</option><option value="Major county fair">Major county fair</option><option value="Maker market / downtown street fair">Maker market / downtown street fair</option><option value="Multicultural festival">Multicultural festival</option><option value="Museum special event">Museum special event</option><option value="Pacific Islands cultural family festival">Pacific Islands cultural family festival</option><option value="Preschool science program">Preschool science program</option><option value="Recurring art walk">Recurring art walk</option><option value="Recurring downtown arts event">Recurring downtown arts event</option><option value="STEAM family event">STEAM family event</option><option value="Seasonal family festival">Seasonal family festival</option><option value="Summer art festival">Summer art festival</option><option value="Summer evening nature series">Summer evening nature series</option><option value="Themed heritage fundraiser">Themed heritage fundraiser</option>
+      <option value="">All</option><option value="Asian cultural family festival">Asian cultural family festival</option><option value="Coastal festival">Coastal festival</option><option value="Dia de los Muertos celebration">Dia de los Muertos celebration</option><option value="Family resource fair">Family resource fair</option><option value="Free family art workshops">Free family art workshops</option><option value="Guided junior ranger program">Guided junior ranger program</option><option value="Guided nighttime nature hike">Guided nighttime nature hike</option><option value="Guided outdoor community event">Guided outdoor community event</option><option value="Japanese cultural community festival">Japanese cultural community festival</option><option value="Japanese cultural family festival">Japanese cultural family festival</option><option value="Japanese cultural food festival">Japanese cultural food festival</option><option value="Lebanese cultural food festival">Lebanese cultural food festival</option><option value="Major county fair">Major county fair</option><option value="Maker market / downtown street fair">Maker market / downtown street fair</option><option value="Multicultural festival">Multicultural festival</option><option value="Museum special event">Museum special event</option><option value="Pacific Islands cultural family festival">Pacific Islands cultural family festival</option><option value="Preschool science program">Preschool science program</option><option value="Recurring art walk">Recurring art walk</option><option value="Recurring downtown arts event">Recurring downtown arts event</option><option value="STEAM family event">STEAM family event</option><option value="Seasonal family festival">Seasonal family festival</option><option value="Summer art festival">Summer art festival</option><option value="Summer evening nature series">Summer evening nature series</option><option value="Themed heritage fundraiser">Themed heritage fundraiser</option>
     </select>
   </label>
   <label class="collection-index__field">
@@ -46,7 +46,7 @@ This website version uses a native sortable and filterable table generated from 
     </select>
   </label>
   </div>
-  <p class="collection-index__summary" data-results-summary>Showing 23 events</p>
+  <p class="collection-index__summary" data-results-summary>Showing 25 events</p>
   <div class="collection-index__table-wrap">
     <table class="collection-index__table">
       <thead>
@@ -203,6 +203,24 @@ This website version uses a native sortable and filterable table generated from 
       <td data-label="Date(s)">April 3-5, 2026</td>
       <td data-label="Month">April</td>
       <td data-label="Price">Varies</td>
+      <td data-label="Kids Allowed">Yes</td>
+    </tr>
+    <tr data-search="oc lebanese cultural festival 2026 orange / orange county lebanese cultural food festival june 5-7, 2026 june varies yes strong food, music, dance, vendors, and family programming give this one the dense browse-and-eat cultural festival energy that generic summer fairs usually miss." data-title="oc lebanese cultural festival 2026" data-area="Orange / Orange County" data-type="Lebanese cultural food festival" data-difficulty="" data-date="June 5-7, 2026" data-months="June" data-price="Varies" data-kids="Yes" data-standout="Strong food, music, dance, vendors, and family programming give this one the dense browse-and-eat cultural festival energy that generic summer fairs usually miss." data-sort-date="2026-06-05">
+      <td data-label="Name"><a href="./oc-lebanese-cultural-festival-2026.md">OC Lebanese Cultural Festival 2026</a></td>
+      <td data-label="Area">Orange / Orange County</td>
+      <td data-label="Type">Lebanese cultural food festival</td>
+      <td data-label="Date(s)">June 5-7, 2026</td>
+      <td data-label="Month">June</td>
+      <td data-label="Price">Varies</td>
+      <td data-label="Kids Allowed">Yes</td>
+    </tr>
+    <tr data-search="ocbc hanamatsuri festival 2026 anaheim / orange county japanese cultural community festival april 18-19, 2026 april free yes free food-forward japanese cultural programming, demonstrations, and performances make this one of the strongest community-rooted spring festivals in oc." data-title="ocbc hanamatsuri festival 2026" data-area="Anaheim / Orange County" data-type="Japanese cultural community festival" data-difficulty="" data-date="April 18-19, 2026" data-months="April" data-price="Free" data-kids="Yes" data-standout="Free food-forward Japanese cultural programming, demonstrations, and performances make this one of the strongest community-rooted spring festivals in OC." data-sort-date="2026-04-18">
+      <td data-label="Name"><a href="./ocbc-hanamatsuri-festival-2026.md">OCBC Hanamatsuri Festival 2026</a></td>
+      <td data-label="Area">Anaheim / Orange County</td>
+      <td data-label="Type">Japanese cultural community festival</td>
+      <td data-label="Date(s)">April 18-19, 2026</td>
+      <td data-label="Month">April</td>
+      <td data-label="Price">Free</td>
       <td data-label="Kids Allowed">Yes</td>
     </tr>
     <tr data-search="open space celebration 2026 irvine / orange county guided outdoor community event april 18, 2026 april free yes" data-title="open space celebration 2026" data-area="Irvine / Orange County" data-type="Guided outdoor community event" data-difficulty="" data-date="April 18, 2026" data-months="April" data-price="Free" data-kids="Yes" data-standout="" data-sort-date="2026-04-18">
