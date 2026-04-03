@@ -156,6 +156,11 @@ body[data-slug="restaurants/index"] .page > #quartz-body {
   font-weight: 700;
 }
 
+.restaurant-index__table tr[hidden],
+.collection-index__table tr[hidden] {
+  display: none !important;
+}
+
 .restaurant-index__thumb-cell {
   width: 7rem;
   min-width: 7rem;

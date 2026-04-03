@@ -12,7 +12,7 @@ A public guide to standout restaurants, activities, nature spots, hikes, unique 
 
 Immersive restaurants, bars, dinner shows, and themed dining-adjacent experiences across Orange County, Los Angeles, Temecula, and San Diego.
 
-Currently published notes: **28**
+Currently published notes: **34**
 
 ### [Activities](./activities/)
 
